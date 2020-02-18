@@ -18,13 +18,8 @@ end
 
 def find_the_cheese(array)
   cheese_types = ["cheddar", "gouda", "camembert"]
-  i = 0 
-  while i < array.length 
-    if array.include?(cheese_types[i])
-      return cheese_types[i]
-    else
-      i+=1 
-    end
+  
+  array.find do |maybe_cheese|
+    cheese_types.include?(maybe_cheese)
   end
-  nil
 end
